@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Potencia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="JS/potencia.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="text-center">Calculadora de Potencia</h1>
+                    </div>
+                    <div class="card-body">
+                        <form id="potenciaForm">
+                            <div class="mb-3">
+                                <label for="base" class="form-label">Base:</label>
+                                <input type="number" id="base" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exponente" class="form-label">Exponente:</label>
+                                <input type="number" id="exponente" class="form-control" required>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Calcular Potencia</button>
+                            </div>
+                        </form>
+                        <div class="mt-4">
+                            <h4 class="text-center">Resultado:</h4>
+                            <div id="resultado" class="text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

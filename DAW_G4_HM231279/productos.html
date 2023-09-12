@@ -1,0 +1,74 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrapicons@1.9.1/font/bootstrap-icons.css">
+    <script src="JS/producto.js"></script>
+    <title>Cajero de Productos</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div>
+            <h1 class="text-center">Cajero de Productos</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-sm-12">
+            <form action="javascript:void(0)" name="frmproduct" id="frmproduct" class="col s12">
+                <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="bi bi-file-earmarkperson"></i></div>
+                    </div>
+                    <input type="text" placeholder="Nombre del producto" name="txtproducto"
+                           class="form-control" id="producto"
+                           required maxlength="60" />
+                </div>
+                <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="bi bi-cash"></i></div>
+                    </div>
+                    <input type="number" placeholder="Precio unitario" class="form-control"
+                           name="txtprecio" id="precio"
+                           min="0.01" step="0.01" required />
+                </div>
+                <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="bi bi-sort-numeric-up"></i></div>
+                    </div>
+                    <input type="number" placeholder="Cantidad" class="form-control"
+                           name="txtcantidad" id="cantidad"
+                           min="1" required />
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" name="agregar" id="agregar" class="btn btn-success w-25
+                    col-md-12">Agregar Producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <hr>
+        <h1 class="text-center">Lista de Productos</h1>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio Unitario</th>
+                <th>Cantidad</th>
+                <th>Detalle</th>
+            </tr>
+            </thead>
+            <tbody id="listaproductos">
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-end">
+            <h3>Total Venta: <span id="totalventa">0.00</span></h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>
